@@ -12,7 +12,8 @@ function CreateUser() {
   const [password,setPassword] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:3001/users/add',{username:username,password:password})
+    Axios.post(`https://lazy-ray-cowboy-boots.cyclic.app/users/add`,   //https://lazy-ray-cowboy-boots.cyclic.app
+    {username:username,password:password})
     .then(() => alert("User Created"))
     .catch(e => console.log(e))
     setUsername("");

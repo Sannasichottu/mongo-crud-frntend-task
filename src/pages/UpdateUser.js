@@ -10,7 +10,7 @@ function UpdateUser({id}) {
   const[username,setUsername] = useState("");
   const [password,setPassword] = useState("");
   const updateHandler = (id) => {
-    Axios.post(`http://localhost:3001/users/update/${id}`,{username:username, password:password})
+    Axios.post(`https://lazy-ray-cowboy-boots.cyclic.app/users/update/${id}`,{username:username, password:password})
     .then(() => alert("User Updated"))
     .catch(err => console.log(err))
 

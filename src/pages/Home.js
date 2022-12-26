@@ -8,11 +8,11 @@ function Home({getId}) {
   const navigate = useNavigate();
   const [users,setUsers] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3001/users").then(res => setUsers(res.data))
+    Axios.get(`https://lazy-ray-cowboy-boots.cyclic.app/users`).then(res => setUsers(res.data))
   })
 
   const deleteUser = (id) => {
-    Axios.delete(`http://localhost:3001/users/${id}`)
+    Axios.delete(`https://lazy-ray-cowboy-boots.cyclic.app/users/${id}`)
     .then(() => alert("User Deleted"))
     .catch((e) => console.log(e))
   }
